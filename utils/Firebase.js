@@ -3,11 +3,11 @@ import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
-  authDomain: "logine-commerce-41c26.firebaseapp.com",
-  projectId: "logine-commerce-41c26",
-  storageBucket: "logine-commerce-41c26.firebasestorage.app",
-  messagingSenderId: "588950898590",
-  appId: "1:588950898590:web:70cdde490a1a1f4a88b88f"
+  authDomain: "zappshop-e-commerce.firebaseapp.com",
+  projectId: "zappshop-e-commerce",
+  storageBucket: "zappshop-e-commerce.firebasestorage.app",
+  messagingSenderId: "324397555123",
+  appId: "1:324397555123:web:f7391287a5e90597517fc6"
 };
 
 // Initialize Firebase
