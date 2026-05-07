@@ -4,6 +4,6 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/zappshop-e-commerce/",
+  base: "/zappshop-ecommerce/",
   plugins: [react(),tailwindcss()],
 })
