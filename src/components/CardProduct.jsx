@@ -9,7 +9,7 @@ const CardProduct = ({ name, image, id, price }) => {
 
   return (
     <div className='w-75 max-w-[90%] h-100 bg-[#ffffff0a] backdrop-blur-lg rounded-lg hover:scale-[102%] flex flex-col overflow-hidden cursor-pointer border border-[#80808049] group transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-cyan-500/30 hover:border-cyan-400/50' onClick={() => navigate(`/productdetail/${id}`)}>
-      <img src={image?.url} alt="" className='w-full h-[70%] rounded-t-lg object-cover group-hover:scale-105 transition-transform duration-400' />
+      <img src={image} alt="" className='w-full h-[70%] rounded-t-lg object-cover group-hover:scale-105 transition-transform duration-400' />
       
       {/* Content - Bottom 30% */}
       <div className="p-4 flex flex-col flex-1 justify-end">

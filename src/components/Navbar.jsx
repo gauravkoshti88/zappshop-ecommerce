@@ -25,8 +25,7 @@ const Navbar = () => {
         try {
             const result = await axios.get(serverUrl + '/api/logout', { withCredentials: true });
             console.log(result.data);
-            getCurrentUser();
-            navigate("login");
+            navigate("/login");
         } catch (error) {
             console.log("Logout Error", error);
         }

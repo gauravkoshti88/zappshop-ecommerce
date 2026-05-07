@@ -292,7 +292,7 @@ const PlaceOrder = () => {
                 type='submit'
                 className='w-full lg:w-auto px-8 py-4 mt-6 lg:mt-0 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:via-teal-500 hover:to-emerald-600 text-white text-lg lg:text-xl font-bold rounded-3xl shadow-2xl hover:shadow-3xl hover:shadow-emerald-500/50 transition-all duration-400 hover:scale-[1.02] active:scale-98 border-2 border-emerald-500/50 flex items-center justify-center gap-3 group'
               >
-                <span>PLACE ORDER</span>
+                <span>{method == "cod" ? "PLACE ORDER" : "PAY & PLACE"}</span>
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

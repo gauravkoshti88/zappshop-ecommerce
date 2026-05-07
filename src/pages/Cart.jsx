@@ -86,7 +86,7 @@ const Cart = () => {
                     {/* Product Image - Mobile Full Width */}
                     <div className="w-full lg:w-auto lg:col-span-1">
                       <img
-                        src={productData.image1}
+                        src={productData.image1?.url}
                         alt={productData.name}
                         className="w-full max-w-[140px] sm:max-w-[160px] lg:w-32 lg:h-32 h-32 mx-auto lg:mx-0 rounded-2xl object-cover shadow-xl group-hover:shadow-2xl group-hover:shadow-cyan-500/30 transition-all duration-400 hover:scale-105"
                       />

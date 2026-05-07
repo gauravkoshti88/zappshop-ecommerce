@@ -177,7 +177,7 @@ useEffect(() => {
                   id={item._id} 
                   name={item.name} 
                   price={item.price} 
-                  image={item.image1}
+                  image={item.image1.url}
                 />
               ))
             ) : (

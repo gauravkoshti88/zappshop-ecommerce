@@ -9,14 +9,10 @@ const BestSeller = () => {
   const [bestSeller, setBestSeller] = useState([])
 
   useEffect(() => {
-    console.log("Products:", products)
 
-    // Handle both boolean and string values
     const filterProduct = products.filter(
       (item) => item.bestseller === true
     )
-
-    console.log("Filtered Best Sellers:", filterProduct)
 
     setBestSeller(filterProduct.slice(0, 4))
   }, [products])
@@ -40,7 +36,7 @@ const BestSeller = () => {
               name={item.name}
               id={item._id}
               price={`${currency}${item.price}`}
-              image={item.image1}
+              image={item.image1.url}
             />
           ))
         )}

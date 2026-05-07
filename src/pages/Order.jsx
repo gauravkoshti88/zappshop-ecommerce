@@ -71,7 +71,7 @@ const Order = () => {
                 <div className="flex flex-col sm:flex-row gap-6">
                   <div className="flex justify-center sm:justify-start">
                     <img
-                      src={item.image1}
+                      src={item.image1?.url}
                       alt={item.name}
                       className="w-32 h-32 rounded-md object-cover shadow-lg"
                     />

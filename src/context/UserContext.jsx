@@ -12,8 +12,6 @@ const UserContext = ({children}) => {
     let {serverUrl} = useContext(dataContext);
     
     const getCurrentUser = async () => {
-        console.log(serverUrl);
-        
         try {
             let result = await axios.post(serverUrl+'/user/getcurrentuser',{},{withCredentials:true})
             setUserData(result.data);

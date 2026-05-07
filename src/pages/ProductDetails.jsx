@@ -25,11 +25,11 @@ const ProductDetails = () => {
     products.map((item) => {
       if (item._id === productId) {
         setProductData(item)
-        setImage(item.image1)
-        setImage1(item.image1)
-        setImage2(item.image2)
-        setImage3(item.image3)
-        setImage4(item.image4)
+        setImage(item.image1?.url)
+        setImage1(item.image1?.url)
+        setImage2(item.image2?.url)
+        setImage3(item.image3?.url)
+        setImage4(item.image4?.url)
 
         return null;
       }
