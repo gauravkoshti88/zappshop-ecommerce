@@ -52,7 +52,7 @@ const App = () => {
         <Route path="*" element={userData ? <NotFound /> : <Navigate to="/login" />} />
       </Routes>
 
-      <Ai />
+      {userData && <Ai />}
     </>
   );
 };

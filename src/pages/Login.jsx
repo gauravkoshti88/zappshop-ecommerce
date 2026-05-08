@@ -28,6 +28,8 @@ const Login = () => {
       navigate('/');
       toast.success(`${data.message}`, { position: "top-right", autoClose: 3000, transition: Bounce });
     } catch (error) {
+      console.log(error.response.data);
+      
       toast.error('Server Error ⚠️', { position: "top-right", autoClose: 3000, transition: Bounce });
     }
   }

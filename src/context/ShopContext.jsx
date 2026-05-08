@@ -27,7 +27,17 @@ const ShopContext = ({ children }) => {
 
   const addToCart = async (itemId, size) => {
     if (!size) {
-      console.log("Select Product Size");
+      toast.success('Select Size ⚠️', {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
+      });
       return;
     }
 
@@ -56,7 +66,7 @@ const ShopContext = ({ children }) => {
       theme: "dark",
       transition: Bounce,
     });
-   
+
     if (userData) {
       try {
         let result = await axios.post(serverUrl + "/cart/addtocart", { itemId, size }, { withCredentials: true })
@@ -107,23 +117,23 @@ const ShopContext = ({ children }) => {
   }
 
   const getCartAmount = () => {
-  let totelAmount = 0;
-  for (const items in cartItem) {
-    // find product info
-    const itemInfo = products.find((product) => product._id === items);
+    let totelAmount = 0;
+    for (const items in cartItem) {
+      // find product info
+      const itemInfo = products.find((product) => product._id === items);
 
-    // agar product nahi mila to skip karo
-    if (!itemInfo) continue;
+      // agar product nahi mila to skip karo
+      if (!itemInfo) continue;
 
-    for (const size in cartItem[items]) {
-      const quantity = cartItem[items][size] || 0;
-      if (quantity > 0) {
-        totelAmount += (itemInfo.price || 0) * quantity;
+      for (const size in cartItem[items]) {
+        const quantity = cartItem[items][size] || 0;
+        if (quantity > 0) {
+          totelAmount += (itemInfo.price || 0) * quantity;
+        }
       }
     }
-  }
-  return totelAmount;
-};
+    return totelAmount;
+  };
 
 
   useEffect(() => {
@@ -131,7 +141,7 @@ const ShopContext = ({ children }) => {
   }, [])
 
   useEffect(() => {
-    if(userData){
+    if (userData) {
       getUserCart()
     }
   }, [userData])

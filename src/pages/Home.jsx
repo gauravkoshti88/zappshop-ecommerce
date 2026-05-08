@@ -28,22 +28,22 @@ const Home = () => {
       </div>
 
       {/* Product Section */}
-      <section className="w-full px-5 md:px-10 lg:px-20 py-12 bg-[#0f3460]">
+      <section className="w-full px-5 md:px-10 lg:px-10 py-12 bg-[#0f3460]">
         <Product />
       </section>
 
       {/* Policy Section */}
-      <section className="w-full px-5 md:px-10 lg:px-20 py-12 bg-[#16213e]">
+      <section className="w-full px-5 md:px-10 lg:px-10 py-12 bg-[#16213e]">
         <OurPolicy />
       </section>
 
       {/* Newsletter Section */}
-      <section className="w-full px-5 md:px-10 lg:px-20 py-12 bg-[#1a1a2e]">
+      <section className="w-full px-5 md:px-10 lg:px-10 py-12 bg-[#1a1a2e]">
         <NewLetterBox />
       </section>
 
       {/* Footer Section */}
-      <footer className="w-full bg-[#0c2025] text-white py-10 px-5 md:px-10 lg:px-20">
+      <footer className="w-full bg-[#0c2025] text-white px-5 md:px-10 lg:px-0">
         <Footer />
       </footer>
     </>

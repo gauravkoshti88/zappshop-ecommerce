@@ -14,7 +14,7 @@ import ProfileImg from '../assets/profile.png'
 
 const Navbar = () => {
     let { serverUrl } = useContext(dataContext);
-    let { userData, getCurrentUser } = useContext(userDataContext);
+    let { userData, getCurrentUser, setUserData } = useContext(userDataContext);
     let { showSearch, setShowSearch, search, setSearch, getCartCount } = useContext(shopDataContext);
     let [showProfile, setShowProfile] = useState(false);
     let navigate = useNavigate();
@@ -24,7 +24,7 @@ const Navbar = () => {
     const handleLogout = async () => {
         try {
             const result = await axios.get(serverUrl + '/api/logout', { withCredentials: true });
-            console.log(result.data);
+            setUserData(null)
             navigate("/login");
         } catch (error) {
             console.log("Logout Error", error);
@@ -37,7 +37,13 @@ const Navbar = () => {
                 setShowProfile(false);
             }
         };
+        function handleScroll() {
+            setShowProfile(false);
+            setShowSearch(false)
+        }
+
         document.addEventListener("mousedown", handleClickOutside);
+        window.addEventListener("scroll", handleScroll);
         return () => {
             document.removeEventListener("mousedown", handleClickOutside);
         };
@@ -58,17 +64,17 @@ const Navbar = () => {
                     {/* Desktop Nav Links */}
                     <div className="hidden md:flex items-center justify-center flex-1 mx-4 gap-2">
                         <ul className="flex items-center gap-2">
-                            <li><Link to="/" className="px-3 py-2 text-sm font-semibold text-gray-800 bg-white/60 hover:bg-white/80 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 border border-white/30 hover:border-cyan-200/50 flex items-center gap-1.5"><IoHome className="w-4 h-4 text-cyan-600"/>HOME</Link></li>
-                            <li><Link to="/collections" className="px-3 py-2 text-sm font-semibold text-gray-800 bg-white/60 hover:bg-white/80 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 border border-white/30 hover:border-cyan-200/50 flex items-center gap-1.5"><HiOutlineCollection className="w-4 h-4 text-cyan-600"/>COLLECTIONS</Link></li>
+                            <li><Link to="/" className="px-3 py-2 text-sm font-semibold text-gray-800 bg-white/60 hover:bg-white/80 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 border border-white/30 hover:border-cyan-200/50 flex items-center gap-1.5"><IoHome className="w-4 h-4 text-cyan-600" />HOME</Link></li>
+                            <li><Link to="/collections" className="px-3 py-2 text-sm font-semibold text-gray-800 bg-white/60 hover:bg-white/80 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 border border-white/30 hover:border-cyan-200/50 flex items-center gap-1.5"><HiOutlineCollection className="w-4 h-4 text-cyan-600" />COLLECTIONS</Link></li>
                             <li><Link to="/about" className="px-3 py-2 text-sm font-semibold text-gray-800 bg-white/60 hover:bg-white/80 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 border border-white/30 hover:border-cyan-200/50">ABOUT</Link></li>
-                            <li><Link to="/contact" className="px-3 py-2 text-sm font-semibold text-gray-800 bg-white/60 hover:bg-white/80 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 border border-white/30 hover:border-cyan-200/50 flex items-center gap-1.5"><MdContacts className="w-4 h-4 text-cyan-600"/>CONTACT</Link></li>
+                            <li><Link to="/contact" className="px-3 py-2 text-sm font-semibold text-gray-800 bg-white/60 hover:bg-white/80 backdrop-blur-sm rounded-xl shadow-md hover:shadow-lg hover:scale-105 active:scale-95 transition-all duration-200 border border-white/30 hover:border-cyan-200/50 flex items-center gap-1.5"><MdContacts className="w-4 h-4 text-cyan-600" />CONTACT</Link></li>
                         </ul>
                     </div>
 
                     {/* Right Icons */}
                     <div className="flex items-center gap-2">
                         {/* Search */}
-                        <button 
+                        <button
                             className="p-2 rounded-xl bg-white/70 hover:bg-white/90 backdrop-blur-sm shadow-md hover:shadow-lg hover:scale-110 active:scale-95 transition-all duration-200 border border-white/40 hover:border-cyan-200/50 group"
                             onClick={() => { setShowSearch(prev => !prev); navigate("/collections"); setShowProfile(false) }}
                         >
@@ -77,7 +83,7 @@ const Navbar = () => {
 
                         {/* Profile */}
                         <div className="relative">
-                            <button 
+                            <button
                                 className="p-2 rounded-full bg-white/70 hover:bg-white/90 backdrop-blur-sm shadow-md hover:shadow-lg hover:scale-110 active:scale-95 transition-all duration-200 border-2 border-white/40 hover:border-blue-300/60 group"
                                 onClick={() => { setShowProfile(prev => !prev); setShowSearch(false) }}
                             >
@@ -93,7 +99,7 @@ const Navbar = () => {
 
                         {/* Cart - Desktop Only */}
                         <div className="relative hidden md:block">
-                            <button 
+                            <button
                                 className="p-2 rounded-xl bg-white/70 hover:bg-white/90 backdrop-blur-sm shadow-md hover:shadow-lg hover:scale-110 active:scale-95 transition-all duration-200 border border-white/40 hover:border-emerald-200/50 group"
                                 onClick={() => { navigate("/cart"); setShowSearch(false); setShowProfile(false) }}
                             >
@@ -110,11 +116,11 @@ const Navbar = () => {
             {/* Search Bar */}
             {showSearch && (
                 <div className="absolute w-full h-16 bg-gradient-to-r from-cyan-500/95 to-blue-500/95 backdrop-blur-xl top-16 z-40 shadow-2xl border-b border-white/20 px-4 py-2">
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         className="w-full h-12 px-12 rounded-3xl bg-white/90 backdrop-blur-sm text-base font-medium text-gray-900 placeholder-gray-500 shadow-xl focus:shadow-2xl focus:outline-none focus:ring-4 focus:ring-cyan-300/50 focus:border-transparent transition-all duration-200 border border-white/30"
-                        placeholder="Search products..." 
-                        onChange={(e) => setSearch(e.target.value)} 
+                        placeholder="Search products..."
+                        onChange={(e) => setSearch(e.target.value)}
                         value={search}
                         autoFocus
                     />
@@ -125,7 +131,7 @@ const Navbar = () => {
             {showProfile && (
                 <div
                     ref={profileRef}
-                    className="absolute w-64 sm:w-72 bg-gradient-to-br from-slate-900/95 to-slate-800/90 backdrop-blur-xl top-16 right-3 border border-white/10 rounded-2xl z-50 shadow-2xl hover:shadow-3xl transition-all duration-300"
+                    className="fixed w-64 sm:w-72 bg-gradient-to-br from-slate-900/95 to-slate-800/90 backdrop-blur-xl top-16 right-3 border border-white/10 rounded-2xl z-50 shadow-2xl transition-all duration-300"
                 >
                     {/* Profile Header */}
                     <div className="p-4 border-b border-white/10 bg-gradient-to-r from-slate-800/50 to-slate-900/50 rounded-t-2xl">
@@ -197,7 +203,7 @@ const Navbar = () => {
                     </ul>
                 </div>
             )}
-            
+
             <BottomBar />
         </>
     );

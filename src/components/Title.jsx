@@ -1,8 +1,10 @@
-
-const Title = ({text1, text2}) => {
+const Title = ({ text1, text2 }) => {
   return (
-    <div className='inline-flex gap-2 items-center text-center mb-3 text-[30px] md:text-[40px]'>
-        <p className='text-blue-100'>{text1} <span className='text-[#a5faf7]'>{text2}</span></p>
+    <div className="inline-flex gap-2 items-center text-center mb-3 
+                    text-[20px] sm:text-[28px] md:text-[36px] lg:text-[44px] font-bold">
+      <p className="text-blue-100">
+        {text1} <span className="text-[#a5faf7]">{text2}</span>
+      </p>
     </div>
   )
 }
