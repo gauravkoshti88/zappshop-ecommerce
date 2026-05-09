@@ -27,7 +27,7 @@ const ShopContext = ({ children }) => {
 
   const addToCart = async (itemId, size) => {
     if (!size) {
-      toast.success('Select Size ⚠️', {
+      toast.error('Select Size ⚠️', {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
