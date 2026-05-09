@@ -3,15 +3,19 @@ import Title from '../components/Title'
 import { dataContext } from '../context/AuthContext';
 import { shopDataContext } from '../context/ShopContext';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Order = () => {
   let [orderData, setOrderData] = useState([]);
   let { serverUrl } = useContext(dataContext);
   let { currency } = useContext(shopDataContext);
+  const navigate = useNavigate()
 
   const loadOrderData = async () => {
     try {
       let result = await axios.post(serverUrl + '/order/userorder', {}, { withCredentials: true })
+      console.log(result.data);
+      
       if (result.data) {
         let allOrdersItem = []
         result.data.map(order => {
@@ -100,7 +104,7 @@ const Order = () => {
               hover:bg-[#2bb3d9] active:scale-95 transition-all duration-300">Order Delivered Successfully ✅</div> : <button
                     className="mt-3 sm:mt-0 px-5 py-2 rounded-md bg-[#46d1f7] text-black font-semibold text-sm md:text-base 
               hover:bg-[#2bb3d9] active:scale-95 transition-all duration-300"
-                    onClick={loadOrderData}
+                    onClick={()=>navigate("/track-order")}
                   >
                     Track Order
                   </button>}

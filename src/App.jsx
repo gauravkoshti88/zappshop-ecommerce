@@ -16,6 +16,7 @@ import Order from "./pages/Order";
 import OrderPlaced from "./pages/OrderPlaced";
 import NotFound from "./pages/NotFound";
 import Ai from "./components/Ai";
+import TrackOrder from "./pages/TrackOrder";
 
 const App = () => {
   let { userData } = useContext(userDataContext);
@@ -49,9 +50,12 @@ const App = () => {
 
         <Route path="/order" element={userData ? <Order /> : <Navigate to="/login" />} />
 
-        <Route path="*" element={userData ? <NotFound /> : <Navigate to="/login" />} />
-      </Routes>
+        <Route path="*" element={userData ? <NotFound /> : <Navigate to="/login" />} /> 
 
+        <Route path="/track-order" element={userData ? <TrackOrder /> : <Navigate to="/login" />} /> 
+
+      </Routes>
+    
       {userData && <Ai />}
     </>
   );

@@ -49,7 +49,7 @@ const Cart = () => {
 
   return (
     <div className="relative w-full min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-blue-900/80 pt-20 pb-16 px-4 sm:px-6 lg:px-12 overflow-hidden">
-      
+
       {/* Mobile-optimized background */}
       <div className="absolute inset-0 z-0 hidden lg:block">
         <div className="absolute top-40 left-10 w-64 h-64 bg-cyan-500/5 rounded-full blur-3xl animate-pulse" />
@@ -57,7 +57,7 @@ const Cart = () => {
       </div>
 
       <div className="relative z-20 max-w-6xl mx-auto">
-        
+
         {/* Header - Mobile optimized */}
         <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <Title text1="YOUR" text2="CART" />
@@ -82,7 +82,7 @@ const Cart = () => {
                 >
                   {/* Mobile: Vertical Stack | Desktop: Grid */}
                   <div className="grid grid-cols-1 lg:grid-cols-4 items-start lg:items-center gap-4 lg:gap-8">
-                    
+
                     {/* Product Image - Mobile Full Width */}
                     <div className="w-full lg:w-auto lg:col-span-1">
                       <img
@@ -97,7 +97,7 @@ const Cart = () => {
                       <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white line-clamp-2 lg:line-clamp-1 group-hover:text-cyan-300 transition-colors duration-300">
                         {productData.name}
                       </h3>
-                      
+
                       <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                         <span className="text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r from-cyan-400 to-emerald-400 bg-clip-text text-transparent drop-shadow-lg">
                           {currency} {productData.price.toLocaleString()}
@@ -115,7 +115,7 @@ const Cart = () => {
 
                     {/* Controls - Mobile Stacked */}
                     <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 lg:flex-col lg:gap-6 lg:items-center lg:col-span-1 w-full sm:w-auto">
-                      
+
                       {/* Quantity Controls */}
                       <div className="flex items-center w-full sm:w-auto bg-slate-700/60 backdrop-blur-sm rounded-2xl p-2 sm:p-3 border border-slate-600/50 hover:border-cyan-400/70 group/quantity transition-all duration-300 shadow-lg hover:shadow-xl mx-auto sm:mx-0">
                         <button
@@ -127,11 +127,11 @@ const Cart = () => {
                         >
                           <RiSubtractFill className="w-5 h-5 sm:w-6 sm:h-6" />
                         </button>
-                        
+
                         <span className="w-14 sm:w-16 text-center text-lg sm:text-xl font-bold text-white mx-2 sm:mx-3 min-w-[3.25rem] flex-shrink-0">
                           {item.quantity}
                         </span>
-                        
+
                         <button
                           onClick={(e) => {
                             e.stopPropagation();
@@ -187,7 +187,14 @@ const Cart = () => {
           <div className="w-full max-w-2xl mx-auto px-4 sm:px-0 mb-15">
             <CartTotal />
             <button
-              className="w-full mt-8 py-4 sm:py-5 lg:py-5 rounded-3xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:via-teal-500 hover:to-emerald-600 text-white text-lg sm:text-xl font-bold shadow-2xl hover:shadow-3xl hover:shadow-emerald-500/50 transition-all duration-500 hover:scale-[1.02] active:scale-98 border-2 border-emerald-500/50 px-8"
+              className="w-full mt-8 py-3 sm:py-5 lg:py-5 
+             rounded-3xl bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 
+             hover:from-emerald-500 hover:via-teal-500 hover:to-emerald-600 
+             text-white 
+             text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 
+             font-bold shadow-2xl hover:shadow-3xl hover:shadow-emerald-500/50 
+             transition-all duration-500 hover:scale-[1.02] active:scale-98 
+             border-2 border-emerald-500/50 px-3"
               onClick={() => navigate('/placeorder')}
             >
               PROCEED TO CHECKOUT →

@@ -137,9 +137,9 @@ const PlaceOrder = () => {
                   {/* Razorpay */}
                   <button
                     onClick={() => setMethod("razorpay")}
-                    className={`w-full h-16 rounded-2xl p-3 flex items-center gap-3 cursor-pointer transition-all duration-400 shadow-xl hover:shadow-2xl hover:shadow-blue-500/30 border-2 ${method === "razorpay"
-                        ? 'border-blue-400/70 bg-gradient-to-r from-blue-500/20 to-blue-600/20 ring-2 ring-blue-400/50 scale-105'
-                        : 'border-slate-600/50 hover:border-blue-400/50 bg-slate-700/50 hover:bg-blue-500/10'
+                    className={`w-full h-16 rounded-2xl p-2 py-10 flex items-center gap-3 cursor-pointer transition-all duration-400 shadow-xl hover:shadow-2xl hover:shadow-blue-500/30 border-2 ${method === "razorpay"
+                      ? 'border-blue-400/70 bg-gradient-to-r from-blue-500/20 to-blue-600/20 ring-2 ring-blue-400/50 scale-105'
+                      : 'border-slate-600/50 hover:border-blue-400/50 bg-slate-700/50 hover:bg-blue-500/10'
                       } group hover:scale-[1.02] active:scale-95`}
                   >
                     <img src={razorpay} className='w-12 h-10 object-contain bg-white rounded-lg flex-shrink-0 group-hover:brightness-110 transition-all duration-300' alt='Razorpay' />
@@ -157,9 +157,9 @@ const PlaceOrder = () => {
                   {/* COD */}
                   <button
                     onClick={() => setMethod("cod")}
-                    className={`w-full h-16 rounded-2xl p-3 flex items-center gap-3 cursor-pointer transition-all duration-400 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/30 border-2 ${method === "cod"
-                        ? 'border-emerald-400/70 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 ring-2 ring-emerald-400/50 scale-105'
-                        : 'border-slate-600/50 hover:border-emerald-400/50 bg-slate-700/50 hover:bg-emerald-500/10'
+                    className={`w-full h-16 rounded-2xl p-2 py-10 flex items-center gap-3 cursor-pointer transition-all duration-400 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/30 border-2 ${method === "cod"
+                      ? 'border-emerald-400/70 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 ring-2 ring-emerald-400/50 scale-105'
+                      : 'border-slate-600/50 hover:border-emerald-400/50 bg-slate-700/50 hover:bg-emerald-500/10'
                       } group hover:scale-[1.02] active:scale-95`}
                   >
                     <div className="w-12 h-10 bg-gradient-to-br from-emerald-500 to-teal-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg group-hover:shadow-xl group-hover:shadow-emerald-500/50 transition-all duration-300">
@@ -290,10 +290,23 @@ const PlaceOrder = () => {
               {/* Place Order Button */}
               <button
                 type='submit'
-                className='w-full lg:w-auto px-8 py-4 mt-6 lg:mt-0 bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:via-teal-500 hover:to-emerald-600 text-white text-lg lg:text-xl font-bold rounded-3xl shadow-2xl hover:shadow-3xl hover:shadow-emerald-500/50 transition-all duration-400 hover:scale-[1.02] active:scale-98 border-2 border-emerald-500/50 flex items-center justify-center gap-3 group'
+                className='w-full lg:w-auto px-8 py-3 mt-6 lg:mt-0 
+             bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 
+             hover:from-emerald-500 hover:via-teal-500 hover:to-emerald-600 
+             text-white 
+             text-base sm:text-lg md:text-xl lg:text-2xl 
+             font-bold rounded-3xl shadow-2xl hover:shadow-3xl 
+             hover:shadow-emerald-500/50 transition-all duration-400 
+             hover:scale-[1.02] active:scale-98 border-2 border-emerald-500/50 
+             flex items-center justify-center gap-3 group'
               >
                 <span>{method == "cod" ? "PLACE ORDER" : "PAY & PLACE"}</span>
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg
+                  className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
               </button>

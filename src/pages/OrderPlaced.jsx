@@ -44,8 +44,8 @@ export default function OrderPlaced() {
           className="flex justify-center mb-8"
         >
           <div className="relative">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-3xl backdrop-blur-xl border-4 border-emerald-400/30 shadow-2xl flex items-center justify-center mx-auto">
-              <FaCheckCircle className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-emerald-400 shadow-xl drop-shadow-2xl" />
+            <div className="w-16 h-16 sm:w-28 sm:h-28 lg:w-32 lg:h-32 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 rounded-full backdrop-blur-xl border-4 border-emerald-400/30 shadow-2xl flex items-center justify-center mx-auto">
+              <FaCheckCircle className="w-12 h-12 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-emerald-400 shadow-xl drop-shadow-2xl" />
             </div>
             <motion.div
               initial={{ scale: 0 }}
@@ -98,9 +98,9 @@ export default function OrderPlaced() {
             onClick={() => navigate("/order")}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="flex-1 sm:flex-none bg-gradient-to-r from-slate-700/80 to-slate-800/80 backdrop-blur-xl text-white px-8 py-4 rounded-2xl border border-slate-600/50 hover:border-slate-500/70 hover:bg-slate-700 hover:shadow-xl hover:shadow-slate-500/30 transition-all duration-400 font-semibold text-base sm:text-lg shadow-lg group"
+            className="flex-1 sm:flex-none bg-gradient-to-r from-slate-700/80 to-slate-800/80 backdrop-blur-xl text-white px-8 py-3 rounded-2xl border border-slate-600/50 hover:border-slate-500/70 hover:bg-slate-700 hover:shadow-xl hover:shadow-slate-500/30 transition-all duration-400 font-semibold text-base sm:text-lg shadow-lg group"
           >
-            <FaShoppingBag className="w-5 h-5 mr-2 inline group-hover:translate-x-1 transition-transform duration-300" />
+            <FaShoppingBag className="w-3 h-3 sm:w-5 sm:h-5 mr-2 inline group-hover:translate-x-1 transition-transform duration-300" />
             View Orders
           </motion.button>
 
@@ -109,10 +109,10 @@ export default function OrderPlaced() {
             onClick={() => navigate("/")}
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="flex-1 sm:flex-none bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:via-teal-500 hover:to-emerald-600 text-white px-8 py-4 rounded-2xl shadow-2xl hover:shadow-emerald-500/50 transition-all duration-400 font-bold text-base sm:text-lg border border-emerald-500/50 hover:border-emerald-400/70 group"
+            className="flex-1 sm:flex-none bg-gradient-to-r from-emerald-600 via-teal-600 to-emerald-700 hover:from-emerald-500 hover:via-teal-500 hover:to-emerald-600 text-white px-8 py-3 rounded-2xl shadow-2xl hover:shadow-emerald-500/50 transition-all duration-400 font-bold text-base sm:text-lg border border-emerald-500/50 hover:border-emerald-400/70 group"
           >
             Continue Shopping
-            <FaArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform duration-300" />
+            <FaArrowRight className="w-3 h-3 sm:w-5 sm:h-5 ml-2 inline group-hover:translate-x-1 transition-transform duration-300" />
           </motion.button>
         </motion.div>
       </motion.div>
