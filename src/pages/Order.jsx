@@ -15,7 +15,7 @@ const Order = () => {
     try {
       let result = await axios.post(serverUrl + '/order/userorder', {}, { withCredentials: true })
       console.log(result.data);
-      
+
       if (result.data) {
         let allOrdersItem = []
         result.data.map(order => {
@@ -94,6 +94,32 @@ const Order = () => {
                   </div>
                 </div>
 
+                <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold shadow-lg backdrop-blur-sm border transition-all duration-300 hover:shadow-xl hover:-translate-y-0.5 active:scale-95 group bg-emerald-500/10 border-emerald-500/30`}>
+                  {item.paymentMethod === "Razorpay" ? (
+                    <>
+                      <div className="w-2 h-2 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full"></div>
+                      <span className="bg-gradient-to-r from-emerald-500 via-green-500 to-emerald-600 bg-clip-text text-transparent drop-shadow-sm">
+                        Paid
+                      </span>
+                      <div className="w-6 h-6 bg-gradient-to-r from-emerald-400 to-green-500 rounded-full flex items-center justify-center text-xs font-bold text-white shadow-md group-hover:rotate-180 transition-transform duration-500">
+                        ✓
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div className="w-2 h-2 bg-gradient-to-r from-amber-400 to-orange-500 rounded-full animate-pulse [animation-duration:2s]"></div>
+                      <span className="bg-gradient-to-r from-amber-500 via-orange-500 to-amber-600 bg-clip-text text-white drop-shadow-sm">
+                        Pay Amount
+                      </span>
+                      <div className="bg-gradient-to-r from-slate-900/50 to-slate-800/50 backdrop-blur-sm px-3 py-1 rounded-lg border border-amber-500/30 shadow-md">
+                        <span className="font-bold text-lg text-amber-100 drop-shadow-lg">
+                          {currency} {Number(item.price) + 40}
+                        </span>
+                      </div>
+                    </>
+                  )}
+                </div>
+
                 {/* Status + Track */}
                 <div className="flex flex-col sm:flex-row justify-between items-center mt-4">
                   <div className="flex items-center gap-2">
@@ -104,7 +130,7 @@ const Order = () => {
               hover:bg-[#2bb3d9] active:scale-95 transition-all duration-300">Order Delivered Successfully ✅</div> : <button
                     className="mt-3 sm:mt-0 px-5 py-2 rounded-md bg-[#46d1f7] text-black font-semibold text-sm md:text-base 
               hover:bg-[#2bb3d9] active:scale-95 transition-all duration-300"
-                    onClick={()=>navigate("/track-order")}
+                    onClick={() => navigate("/track-order")}
                   >
                     Track Order
                   </button>}

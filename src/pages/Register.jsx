@@ -38,7 +38,7 @@ const Register = () => {
         transition: Bounce,
       });
     } catch (error) {
-      toast.error('Server Error ⚠️', {
+      toast.error(`${error.response.data.message} ⚠️`, {
         position: "top-right",
         autoClose: 3000,
         theme: "light",

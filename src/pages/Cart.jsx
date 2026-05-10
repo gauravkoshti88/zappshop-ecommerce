@@ -161,7 +161,7 @@ const Cart = () => {
           </div>
         ) : (
           /* Empty Cart - Mobile Optimized */
-          <div className="text-center py-24 sm:py-32 px-4">
+          <div className="text-center px-4">
             <div className="w-20 h-20 sm:w-24 sm:h-24 bg-slate-700/50 rounded-3xl mx-auto mb-8 flex items-center justify-center shadow-xl">
               <svg className="w-10 h-10 sm:w-12 sm:h-12 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 7.5A2 2 0 007.4 22h9.2a2 2 0 001.9-1.5L19 13m-8 0a2 2 0 012 2v2a2 2 0 01-2 2m0 0V13m0 0V9a2 2 0 012-2m-2 2h4a2 2 0 012 2v2a2 2 0 01-2 2m0 0h+2" />

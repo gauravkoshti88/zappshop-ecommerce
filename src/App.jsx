@@ -15,7 +15,6 @@ import PlaceOrder from './pages/PlaceOrder';
 import Order from "./pages/Order";
 import OrderPlaced from "./pages/OrderPlaced";
 import NotFound from "./pages/NotFound";
-import Ai from "./components/Ai";
 import TrackOrder from "./pages/TrackOrder";
 
 const App = () => {
@@ -55,8 +54,6 @@ const App = () => {
         <Route path="/track-order" element={userData ? <TrackOrder /> : <Navigate to="/login" />} /> 
 
       </Routes>
-    
-      {userData && <Ai />}
     </>
   );
 };
