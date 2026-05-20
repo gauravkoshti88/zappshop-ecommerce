@@ -15,7 +15,7 @@ function BottomBar() {
   const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="w-full h-22.5 flex items-center justify-between px-5 text-[12px] fixed bottom-0 left-0 bg-[#191818] md:hidden shadow-lg z-100">
+    <div className="w-full h-20 flex items-center justify-between px-5 text-[12px] fixed bottom-0 left-0 bg-[#191818] md:hidden shadow-lg z-100">
       
       {/* Home */}
       <button 

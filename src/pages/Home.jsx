@@ -43,7 +43,7 @@ const Home = () => {
       </section>
 
       {/* Footer Section */}
-      <footer className="w-full bg-[#0c2025] text-white px-5 md:px-10 lg:px-0">
+      <footer className="w-full bg-[#0c2025] text-white px-5 md:px-10 lg:px-0 mb-5 sm:mb-0">
         <Footer />
       </footer>
     </>

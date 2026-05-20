@@ -2,8 +2,10 @@ import { RiExchangeFundsLine } from "react-icons/ri";
 import { TbRosetteDiscountCheckFilled } from "react-icons/tb";
 import { BiSupport } from "react-icons/bi";
 import Title from './Title'
+import { useNavigate } from "react-router-dom";
 
 const OurPolicy = () => {
+  const navigate = useNavigate();
   return (
     <div className="w-full min-h-screen md:min-h-[75%] py-12 flex flex-col items-center 
     bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f3460] gap-12">
@@ -41,7 +43,7 @@ const OurPolicy = () => {
 
         {/* Customer Support */}
         <div className="flex flex-col items-center gap-3 p-6 rounded-2xl 
-        bg-[#142a32] shadow-md shadow-black/40 hover:scale-105 transition-transform duration-300 max-w-sm">
+        bg-[#142a32] shadow-md shadow-black/40 hover:scale-105 transition-transform duration-300 max-w-sm" onClick={()=>navigate("/customerSupport")}>
           <BiSupport className="w-12 h-12 md:w-16 md:h-16 text-[#46d1f7]" />
           <p className="font-semibold text-lg md:text-2xl text-[#a5e8f7]">Best Customer Support</p>
           <p className="text-sm md:text-base text-gray-200 text-center">

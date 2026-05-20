@@ -11,6 +11,7 @@ import { dataContext } from "../context/AuthContext";
 import { shopDataContext } from "../context/ShopContext";
 import BottomBar from './BottomBar'
 import ProfileImg from '../assets/profile.png'
+import {MdShoppingCart, MdInfo, MdSupportAgent, MdLogin, MdLogout} from "react-icons/md";
 
 const Navbar = () => {
     let { serverUrl } = useContext(dataContext);
@@ -152,25 +153,37 @@ const Navbar = () => {
                     <ul className="p-3 space-y-2">
                         <li className="group">
                             <button
-                                className="w-full bg-gradient-to-r from-slate-700/40 to-slate-800/40 px-3 py-2.5 rounded-xl cursor-pointer hover:from-slate-600/60 hover:to-slate-700/60 hover:shadow-lg hover:scale-[1.01] active:scale-98 border border-slate-600/30 transition-all duration-200 text-sm flex items-center gap-2.5"
+                                className="w-full bg-gradient-to-r from-slate-700/40 to-slate-800/40 px-3 py-2.5 rounded-xl cursor-pointer 
+                 hover:from-slate-600/60 hover:to-slate-700/60 hover:shadow-lg hover:scale-[1.01] active:scale-98 
+                 border border-slate-600/30 transition-all duration-200 text-sm flex items-center gap-2.5"
                                 onClick={() => { navigate("/order"); setShowProfile(false); }}
                             >
-                                <svg className="w-4 h-4 text-slate-300 group-hover:text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-1.5 7.5A2 2 0 007.4 22h9.2a2 2 0 001.9-1.5L19 13m-8 0a2 2 0 012 2v2a2 2 0 01-2 2m0 0V13m0 0V9a2 2 0 012-2m-2 2h4a2 2 0 012 2v2a2 2 0 01-2 2m0 0h+2" />
-                                </svg>
+                                <MdShoppingCart className="w-4 h-4 text-slate-300 group-hover:text-white flex-shrink-0" />
                                 <span className="font-medium text-slate-200 group-hover:text-white">Orders</span>
                             </button>
                         </li>
 
                         <li className="group">
                             <button
-                                className="w-full bg-gradient-to-r from-slate-700/40 to-slate-800/40 px-3 py-2.5 rounded-xl cursor-pointer hover:from-slate-600/60 hover:to-slate-700/60 hover:shadow-lg hover:scale-[1.01] active:scale-98 border border-slate-600/30 transition-all duration-200 text-sm flex items-center gap-2.5"
+                                className="w-full bg-gradient-to-r from-slate-700/40 to-slate-800/40 px-3 py-2.5 rounded-xl cursor-pointer 
+                 hover:from-slate-600/60 hover:to-slate-700/60 hover:shadow-lg hover:scale-[1.01] active:scale-98 
+                 border border-slate-600/30 transition-all duration-200 text-sm flex items-center gap-2.5"
                                 onClick={() => { navigate("/about"); setShowProfile(false); }}
                             >
-                                <svg className="w-4 h-4 text-slate-300 group-hover:text-white flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+                                <MdInfo className="w-4 h-4 text-slate-300 group-hover:text-white flex-shrink-0" />
                                 <span className="font-medium text-slate-200 group-hover:text-white">About</span>
+                            </button>
+                        </li>
+
+                        <li className="group">
+                            <button
+                                className="w-full bg-gradient-to-r from-slate-700/40 to-slate-800/40 px-3 py-2.5 rounded-xl cursor-pointer 
+                 hover:from-slate-600/60 hover:to-slate-700/60 hover:shadow-lg hover:scale-[1.01] active:scale-98 
+                 border border-slate-600/30 transition-all duration-200 text-sm flex items-center gap-2.5"
+                                onClick={() => {navigate("/customerSupport"); setShowProfile(false);}}
+                            >
+                                <MdSupportAgent className="w-4 h-4 text-slate-300 group-hover:text-white flex-shrink-0" />
+                                <span className="font-medium text-slate-200 group-hover:text-white">Customer Support</span>
                             </button>
                         </li>
 
@@ -178,29 +191,32 @@ const Navbar = () => {
                         {!userData ? (
                             <li>
                                 <button
-                                    className="w-full bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 px-3 py-2.5 rounded-xl cursor-pointer hover:from-emerald-600/95 hover:to-emerald-700/95 hover:shadow-emerald-400/40 hover:shadow-xl hover:scale-[1.01] active:scale-98 border border-emerald-400/50 transition-all duration-200 shadow-lg text-emerald-900 font-semibold text-sm flex items-center gap-2.5"
+                                    className="w-full bg-gradient-to-r from-emerald-500/90 to-emerald-600/90 px-3 py-2.5 rounded-xl cursor-pointer 
+                   hover:from-emerald-600/95 hover:to-emerald-700/95 hover:shadow-emerald-400/40 hover:shadow-xl 
+                   hover:scale-[1.01] active:scale-98 border border-emerald-400/50 transition-all duration-200 
+                   shadow-lg text-emerald-900 font-semibold text-sm flex items-center gap-2.5"
                                     onClick={() => { navigate('/login'); setShowProfile(false) }}
                                 >
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
-                                    </svg>
+                                    <MdLogin className="w-4 h-4" />
                                     <span>Login</span>
                                 </button>
                             </li>
                         ) : (
                             <li>
                                 <button
-                                    className="w-full bg-gradient-to-r from-red-500/90 to-red-600/90 px-3 py-2.5 rounded-xl cursor-pointer hover:from-red-600/95 hover:to-red-700/95 hover:shadow-red-400/40 hover:shadow-xl hover:scale-[1.01] active:scale-98 border border-red-400/50 transition-all duration-200 shadow-lg text-white font-semibold text-sm flex items-center gap-2.5"
+                                    className="w-full bg-gradient-to-r from-red-500/90 to-red-600/90 px-3 py-2.5 rounded-xl cursor-pointer 
+                   hover:from-red-600/95 hover:to-red-700/95 hover:shadow-red-400/40 hover:shadow-xl 
+                   hover:scale-[1.01] active:scale-98 border border-red-400/50 transition-all duration-200 
+                   shadow-lg text-white font-semibold text-sm flex items-center gap-2.5"
                                     onClick={() => { handleLogout(); setShowProfile(false) }}
                                 >
-                                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
-                                    </svg>
+                                    <MdLogout className="w-4 h-4" />
                                     <span>Logout</span>
                                 </button>
                             </li>
                         )}
                     </ul>
+
                 </div>
             )}
 

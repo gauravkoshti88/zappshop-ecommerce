@@ -16,6 +16,8 @@ import Order from "./pages/Order";
 import OrderPlaced from "./pages/OrderPlaced";
 import NotFound from "./pages/NotFound";
 import TrackOrder from "./pages/TrackOrder";
+import CustomerSupport from "./pages/CustomerSupport";
+import HelpCenter from "./pages/HelpCenter";
 
 const App = () => {
   let { userData } = useContext(userDataContext);
@@ -51,7 +53,11 @@ const App = () => {
 
         <Route path="*" element={userData ? <NotFound /> : <Navigate to="/login" />} /> 
 
-        <Route path="/track-order" element={userData ? <TrackOrder /> : <Navigate to="/login" />} /> 
+        <Route path="/track-order/:orderId" element={userData ? <TrackOrder /> : <Navigate to="/login" />} /> 
+
+        <Route path="/customerSupport" element={userData ? <CustomerSupport /> : <Navigate to="/login" />} /> 
+
+        <Route path="/help-center" element={userData ? <HelpCenter /> : <Navigate to="/login" />} /> 
 
       </Routes>
     </>

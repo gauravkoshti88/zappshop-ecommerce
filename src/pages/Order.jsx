@@ -14,7 +14,6 @@ const Order = () => {
   const loadOrderData = async () => {
     try {
       let result = await axios.post(serverUrl + '/order/userorder', {}, { withCredentials: true })
-      console.log(result.data);
 
       if (result.data) {
         let allOrdersItem = []
@@ -24,13 +23,14 @@ const Order = () => {
             item['payment'] = order.payment
             item['paymentMethod'] = order.paymentMethod
             item['date'] = order.date
+            item['orderId'] = order._id
             allOrdersItem.push(item)
           })
         })
         setOrderData(allOrdersItem.reverse())
       }
     } catch (error) {
-      console.log(error);
+      setOrderData(null)
     }
   }
 
@@ -130,7 +130,7 @@ const Order = () => {
               hover:bg-[#2bb3d9] active:scale-95 transition-all duration-300">Order Delivered Successfully ✅</div> : <button
                     className="mt-3 sm:mt-0 px-5 py-2 rounded-md bg-[#46d1f7] text-black font-semibold text-sm md:text-base 
               hover:bg-[#2bb3d9] active:scale-95 transition-all duration-300"
-                    onClick={() => navigate("/track-order")}
+                    onClick={() => navigate(`/track-order/${item.orderId}`)}
                   >
                     Track Order
                   </button>}
