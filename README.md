@@ -222,27 +222,43 @@ zappshop-ecommerce/
 
 ## 📸 Screenshots
 
-### Home Page
-- Hero slider with featured banners
-- Latest collection products
-- Best sellers section
-- Newsletter subscription box
+### Desktop-View Pages
 
-### Product Pages
-- Product browsing with filters
-- Product detail view with reviews
-- Related products recommendations
+<p>
+   <img src="./screenshots/desktop-view/1.png" width="45%"/>
+   <img src="./screenshots/desktop-view/2.png" width="45%"/>
+   <img src="./screenshots/desktop-view/3.png" width="45%"/>
+   <img src="./screenshots/desktop-view/4.png" width="45%"/>
+   <img src="./screenshots/desktop-view/5.png" width="45%"/>
+   <img src="./screenshots/desktop-view/6.png" width="45%"/>
+   <img src="./screenshots/desktop-view/7.png" width="45%"/>
+   <img src="./screenshots/desktop-view/8.png" width="45%"/>
+   <img src="./screenshots/desktop-view/9.png" width="45%"/>
+   <img src="./screenshots/desktop-view/10.png" width="45%"/>
+   <img src="./screenshots/desktop-view/11.png" width="45%"/>
+   <img src="./screenshots/desktop-view/12.png" width="45%"/>
+   <img src="./screenshots/desktop-view/13.png" width="45%"/>
+   <img src="./screenshots/desktop-view/14.png" width="45%"/>
+</p>
 
-### Shopping & Checkout
-- Shopping cart with quantity management
-- Order placement with address confirmation
-- Order summary and confirmation
+### Mobile-View Pages
 
-### Order Management
-- Order history tracking
-- Real-time order status updates
-- Customer support integration
-
+<p>
+   <img src="./screenshots/mobile-view/1.png" height="400"/>
+   <img src="./screenshots/mobile-view/2.png" height="400"/>
+   <img src="./screenshots/mobile-view/3.png" height="400"/>
+   <img src="./screenshots/mobile-view/4.png" height="400"/>
+   <img src="./screenshots/mobile-view/5.png" height="400"/>
+   <img src="./screenshots/mobile-view/6.png" height="400"/>
+   <img src="./screenshots/mobile-view/7.png" height="400"/>
+   <img src="./screenshots/mobile-view/8.png" height="400"/>
+   <img src="./screenshots/mobile-view/9.png" height="400"/>
+   <img src="./screenshots/mobile-view/10.png" height="400"/>
+   <img src="./screenshots/mobile-view/11.png" height="400"/>
+   <img src="./screenshots/mobile-view/12.png" height="400"/>
+   <img src="./screenshots/mobile-view/13.png" height="400"/>
+   <img src="./screenshots/mobile-view/14.png" height="400"/>
+</p>
 ---
 
 ## 🤝 Contributing
