@@ -329,8 +329,8 @@ The MIT License permits free use, modification, and distribution of this softwar
 
 **Get in touch:**
 - 🐙 **GitHub:** [@gauravkoshti88](https://github.com/gauravkoshti88)
-- 💼 **LinkedIn:** [Gaurav Koshti](https://linkedin.com/in/gaurav-koshti)
-- 📧 **Email:** [Contact through GitHub](https://github.com/gauravkoshti88)
+- 💼 **LinkedIn:** [Gaurav Koshti](https://linkedin.com/in/gaurav-koshti-565b73249)
+- 📧 **Email:** [gauravkoshti1@gmail.com](gauravkoshti1@gmail.com)
 
 **Project Links:**
 - 🌐 **Live Demo:** [https://zappshop-ecommerce.vercel.app](https://zappshop-ecommerce.vercel.app)
