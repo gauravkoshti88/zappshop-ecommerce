@@ -328,7 +328,7 @@ The MIT License permits free use, modification, and distribution of this softwar
 **Developer:** Gaurav Koshti
 
 - 🔗 **GitHub**: [@gauravkoshti88](https://github.com/gauravkoshti88)
-- 💼 **LinkedIn**: [Gaurav Koshti](www.linkedin.com/in/gaurav-koshti-565b73249)
+- 💼 **LinkedIn**: [Gaurav Koshti](https://linkedin.com/in/gaurav-koshti-565b73249)
 - 📧 **Email**: gauravkoshti1@gmail.com
 
 **Project Links:**
