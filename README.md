@@ -244,20 +244,20 @@ zappshop-ecommerce/
 ### Mobile-View Pages
 
 <p>
-   <img src="./screenshots/mobile-view/1.png" height="400"/>
-   <img src="./screenshots/mobile-view/2.png" height="400"/>
-   <img src="./screenshots/mobile-view/3.png" height="400"/>
-   <img src="./screenshots/mobile-view/4.png" height="400"/>
-   <img src="./screenshots/mobile-view/5.png" height="400"/>
-   <img src="./screenshots/mobile-view/6.png" height="400"/>
-   <img src="./screenshots/mobile-view/7.png" height="400"/>
-   <img src="./screenshots/mobile-view/8.png" height="400"/>
-   <img src="./screenshots/mobile-view/9.png" height="400"/>
-   <img src="./screenshots/mobile-view/10.png" height="400"/>
-   <img src="./screenshots/mobile-view/11.png" height="400"/>
-   <img src="./screenshots/mobile-view/12.png" height="400"/>
-   <img src="./screenshots/mobile-view/13.png" height="400"/>
-   <img src="./screenshots/mobile-view/14.png" height="400"/>
+   <img src="./screenshots/mobile-view/1.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/2.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/3.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/4.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/5.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/6.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/7.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/8.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/9.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/10.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/11.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/12.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/13.jpeg" height="400"/>
+   <img src="./screenshots/mobile-view/14.jpeg" height="400"/>
 </p>
 ---
 
